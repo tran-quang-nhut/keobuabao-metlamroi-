@@ -1,12 +1,16 @@
-const choices = ["rock","paper","scissors"];
+const choices = [
+  "rock",
+  "paper",
+  "scissors"
+];
 
 const images = {
 
-  rock:"./assets/img/rock.jpg",
+  rock:"/assets/img/rock.jpg",
 
-  paper:"./assets/img/paper.jpg",
+  paper:"/assets/img/paper.jpg",
 
-  scissors:"./assets/img/scissors.jpg"
+  scissors:"/assets/img/scissors.jpg"
 
 };
 
@@ -115,9 +119,12 @@ buttons.forEach(button=>{
 
 });
 
-/* MAIN GAME */
+/* PLAY ROUND */
 
-async function playRound(playerChoice,computerChoice){
+async function playRound(
+  playerChoice,
+  computerChoice
+){
 
   disableButtons();
 
@@ -177,7 +184,10 @@ function stopShake(){
 
 /* UPDATE HAND */
 
-function updateHands(player,computer){
+function updateHands(
+  player,
+  computer
+){
 
   playerHand.src =
   images[player];
@@ -187,7 +197,7 @@ function updateHands(player,computer){
 
 }
 
-/* ROUND EFFECT */
+/* EFFECT */
 
 function showRoundEffect(winner){
 
@@ -209,7 +219,7 @@ function showRoundEffect(winner){
 
   }
 
-  else if(winner === "computer"){
+  else{
 
     computerCard.classList.add(
       "winner-effect"
@@ -257,7 +267,10 @@ function clearEffects(){
 
 /* RESULT */
 
-function decideWinner(player,computer){
+function decideWinner(
+  player,
+  computer
+){
 
   if(player === computer){
 
@@ -329,7 +342,7 @@ function checkGame(){
 
       "Đỉnh của chóp lun 😆",
 
-      "./assets/img/win-popup.jpg",
+      "/assets/img/win-popup.jpg",
 
       "Chơi Lại"
 
@@ -351,7 +364,7 @@ function checkGame(){
 
       "Không sao hết, trả thù tiếp 🔥",
 
-      "./assets/img/lose-popup.jpg",
+      "/assets/img/lose-popup.jpg",
 
       "Trả Thù"
 
@@ -371,7 +384,7 @@ function checkGame(){
 
       "Chưa phân thắng bại lun 😆",
 
-      "./assets/img/draw-popup.jpg",
+      "/assets/img/draw-popup.jpg",
 
       "Không Muốn Hòa"
 
@@ -494,7 +507,7 @@ function wait(ms){
 
 }
 
-/* RESET BUTTON */
+/* RESET */
 
 document
 .getElementById("resetBtn")
@@ -503,7 +516,7 @@ document
   resetGame
 );
 
-/* POPUP BUTTON */
+/* POPUP */
 
 popupBtn.addEventListener(
   "click",

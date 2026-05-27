@@ -3,13 +3,13 @@
 
 <head>
 
-  <meta charset="UTF-8" />
+  <meta charset="UTF-8">
 
   <meta
     name="viewport"
-    content="width=device-width, initial-scale=1.0" />
+    content="width=device-width, initial-scale=1.0">
 
-  <title>Kéo Búa Bao Cute Battle</title>
+  <title>Kéo Búa Bao Battle</title>
 
   <!-- FONT -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -19,18 +19,18 @@
     rel="stylesheet">
 
   <!-- CSS -->
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="/style.css">
 
 </head>
 
 <body>
 
-  <!-- BLUR BACKGROUND -->
+  <!-- BLUR -->
   <div class="blur blur1"></div>
   <div class="blur blur2"></div>
   <div class="blur blur3"></div>
 
-  <!-- MAIN -->
+  <!-- CONTAINER -->
   <div class="container">
 
     <!-- HEADER -->
@@ -46,7 +46,7 @@
 
     </div>
 
-    <!-- SCORE BOARD -->
+    <!-- SCORE -->
     <div class="score-board">
 
       <!-- PLAYER -->
@@ -58,7 +58,7 @@
 
           <img
             id="playerAvatar"
-            src="./assets/img/player-default.jpg"
+            src="/assets/img/player-default.jpg"
             alt="">
 
         </div>
@@ -113,7 +113,7 @@
         <div class="avatar-box">
 
           <img
-            src="./assets/img/computer-avatar.jpg"
+            src="/assets/img/computer-avatar.jpg"
             alt="">
 
         </div>
@@ -130,7 +130,7 @@
 
     </div>
 
-    <!-- GAME AREA -->
+    <!-- BATTLE -->
     <div class="battle-area">
 
       <!-- PLAYER -->
@@ -143,7 +143,7 @@
           <img
             id="playerHand"
             class="hand player-hand"
-            src="./assets/img/rock.jpg"
+            src="/assets/img/rock.jpg"
             alt="">
 
         </div>
@@ -165,7 +165,7 @@
           <img
             id="computerHand"
             class="hand enemy-hand"
-            src="./assets/img/rock.jpg"
+            src="/assets/img/rock.jpg"
             alt="">
 
         </div>
@@ -231,32 +231,48 @@
   </div>
 
   <!-- AUDIO -->
-  <audio id="clickSound" preload="auto">
+  <audio
+    id="clickSound"
+    preload="auto">
+
     <source
-      src="./assets/sound/click.mp3"
+      src="/assets/sound/click.mp3"
       type="audio/mpeg">
+
   </audio>
 
-  <audio id="shakeSound" preload="auto">
+  <audio
+    id="shakeSound"
+    preload="auto">
+
     <source
-      src="./assets/sound/shake.mp3"
+      src="/assets/sound/shake.mp3"
       type="audio/mpeg">
+
   </audio>
 
-  <audio id="winSound" preload="auto">
+  <audio
+    id="winSound"
+    preload="auto">
+
     <source
-      src="./assets/sound/win.mp3"
+      src="/assets/sound/win.mp3"
       type="audio/mpeg">
+
   </audio>
 
-  <audio id="loseSound" preload="auto">
+  <audio
+    id="loseSound"
+    preload="auto">
+
     <source
-      src="./assets/sound/lose.mp3"
+      src="/assets/sound/lose.mp3"
       type="audio/mpeg">
+
   </audio>
 
   <!-- JS -->
-  <script src="script.js"></script>
+  <script src="/script.js"></script>
 
 </body>
 </html>

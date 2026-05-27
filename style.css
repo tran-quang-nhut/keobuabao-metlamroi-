@@ -364,7 +364,6 @@ body{
   display:flex;
 
   justify-content:center;
-
   align-items:center;
 
   border:3px solid #ffd98f;
@@ -445,9 +444,6 @@ body{
   transform:
   translateY(-5px)
   scale(1.05);
-
-  box-shadow:
-  0 10px 25px rgba(255,140,80,0.35);
 
 }
 
@@ -627,28 +623,6 @@ body{
 
   text-align:center;
 
-  animation:popupShow 0.4s ease;
-
-}
-
-@keyframes popupShow{
-
-  from{
-
-    transform:scale(0.7);
-
-    opacity:0;
-
-  }
-
-  to{
-
-    transform:scale(1);
-
-    opacity:1;
-
-  }
-
 }
 
 .popup-image{
@@ -743,7 +717,6 @@ body{
   .play-btn{
 
     width:100%;
-
     max-width:300px;
 
   }
