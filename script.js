@@ -316,7 +316,7 @@ function decideWinner(
     computerScore;
 
     statusText.innerText =
-    "Máy thắng round này 😢";
+    "Nhựt thắng round này 😢";
 
     showRoundEffect("computer");
 
