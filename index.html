@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+
+  <meta charset="UTF-8" />
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0" />
+
+  <title>Kéo Búa Bao Cute Battle</title>
+
+  <!-- FONT -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;600;700&display=swap"
+    rel="stylesheet">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css" />
+
+</head>
+
+<body>
+
+  <!-- BLUR BACKGROUND -->
+  <div class="blur blur1"></div>
+  <div class="blur blur2"></div>
+  <div class="blur blur3"></div>
+
+  <!-- MAIN -->
+  <div class="container">
+
+    <!-- HEADER -->
+    <div class="header">
+
+      <h1>
+        🎮 Kéo Búa Bao Battle
+      </h1>
+
+      <button id="resetBtn">
+        🔄 Reset
+      </button>
+
+    </div>
+
+    <!-- SCORE BOARD -->
+    <div class="score-board">
+
+      <!-- PLAYER -->
+      <div
+        class="card glass"
+        id="playerCard">
+
+        <div class="avatar-box">
+
+          <img
+            id="playerAvatar"
+            src="./assets/img/player-default.jpg"
+            alt="">
+
+        </div>
+
+        <label class="upload-btn">
+
+          📷 Chọn Avatar
+
+          <input
+            type="file"
+            id="avatarUpload"
+            accept="image/*"
+            hidden>
+
+        </label>
+
+        <h2>Người Chơi</h2>
+
+        <div class="score">
+
+          <span id="playerScore">0</span>
+
+        </div>
+
+      </div>
+
+      <!-- CENTER -->
+      <div class="center-box glass">
+
+        <div class="round-text">
+
+          Round
+          <span id="roundNumber">1</span>/5
+
+        </div>
+
+        <div
+          class="status-text"
+          id="statusText">
+
+          Chọn chiêu để bắt đầu ✨
+
+        </div>
+
+      </div>
+
+      <!-- COMPUTER -->
+      <div
+        class="card glass"
+        id="computerCard">
+
+        <div class="avatar-box">
+
+          <img
+            src="./assets/img/computer-avatar.jpg"
+            alt="">
+
+        </div>
+
+        <h2>Máy</h2>
+
+        <div class="score">
+
+          <span id="computerScore">0</span>
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- GAME AREA -->
+    <div class="battle-area">
+
+      <!-- PLAYER -->
+      <div class="fighter">
+
+        <h3>Người Chơi</h3>
+
+        <div class="hand-box glass">
+
+          <img
+            id="playerHand"
+            class="hand player-hand"
+            src="./assets/img/rock.jpg"
+            alt="">
+
+        </div>
+
+      </div>
+
+      <!-- VS -->
+      <div class="vs-text">
+        VS
+      </div>
+
+      <!-- COMPUTER -->
+      <div class="fighter">
+
+        <h3>Máy</h3>
+
+        <div class="hand-box glass">
+
+          <img
+            id="computerHand"
+            class="hand enemy-hand"
+            src="./assets/img/rock.jpg"
+            alt="">
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- BUTTON -->
+    <div class="controls">
+
+      <button
+        class="play-btn"
+        data-choice="rock">
+
+        ✊ BÚA
+
+      </button>
+
+      <button
+        class="play-btn"
+        data-choice="paper">
+
+        ✋ BAO
+
+      </button>
+
+      <button
+        class="play-btn"
+        data-choice="scissors">
+
+        ✌️ KÉO
+
+      </button>
+
+    </div>
+
+  </div>
+
+  <!-- POPUP -->
+  <div
+    class="popup hidden"
+    id="popup">
+
+    <div class="popup-card glass">
+
+      <img
+        id="popupImage"
+        class="popup-image"
+        src=""
+        alt="">
+
+      <h2 id="popupTitle"></h2>
+
+      <p id="popupDesc"></p>
+
+      <button id="popupBtn">
+        Chơi Lại
+      </button>
+
+    </div>
+
+  </div>
+
+  <!-- AUDIO -->
+  <audio id="clickSound" preload="auto">
+    <source
+      src="./assets/sound/click.mp3"
+      type="audio/mpeg">
+  </audio>
+
+  <audio id="shakeSound" preload="auto">
+    <source
+      src="./assets/sound/shake.mp3"
+      type="audio/mpeg">
+  </audio>
+
+  <audio id="winSound" preload="auto">
+    <source
+      src="./assets/sound/win.mp3"
+      type="audio/mpeg">
+  </audio>
+
+  <audio id="loseSound" preload="auto">
+    <source
+      src="./assets/sound/lose.mp3"
+      type="audio/mpeg">
+  </audio>
+
+  <!-- JS -->
+  <script src="script.js"></script>
+
+</body>
+</html>
